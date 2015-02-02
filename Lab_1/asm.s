@@ -2,7 +2,7 @@
 
   SECTION .intvec:CODE (2)
   DATA
-  DC32 0x20008000U
+  DC32 0x20009000U
   DC32 __iar_program_start
 
   SECTION LAB1:CODE (2)
