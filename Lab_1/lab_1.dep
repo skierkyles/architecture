@@ -12,15 +12,6 @@
       <file>$PROJ_DIR$\asm.s</file>
     </outputs>
     <file>
-      <name>$PROJ_DIR$\Debug\Exe\asm.out</name>
-      <inputs>
-        <tool>
-          <name>ILINK</name>
-          <file> 2 1</file>
-        </tool>
-      </inputs>
-    </file>
-    <file>
       <name>[ROOT_NODE]</name>
       <outputs>
         <tool>
@@ -28,6 +19,15 @@
           <file> 0</file>
         </tool>
       </outputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\Debug\Exe\asm.out</name>
+      <inputs>
+        <tool>
+          <name>ILINK</name>
+          <file> 2 1</file>
+        </tool>
+      </inputs>
     </file>
     <file>
       <name>$PROJ_DIR$\asm.s</name>
