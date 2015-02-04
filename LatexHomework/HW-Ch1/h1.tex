@@ -1,0 +1,117 @@
+\documentclass[12pt,a4paper]{report}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\author{Kyle Swanson}
+\title{Chapter 1 Exercises: Number Systems}
+\setlength{\parindent}{0cm}
+
+\begin{document}
+
+\maketitle
+
+\begin{normalsize}
+
+
+
+\textbf{1.8} What is the largest 32-bit unsigned number?\\
+$ 2^{32}-1 = 4,294,967,295$ \\
+
+\textbf{1.10} What is the largest 32-bit binary number that can be represented with\\
+(a) unsigned numbers?\\
+$ 2^{32}-1 = 4,294,967,295 $
+
+(b) two's complement numbers?\\
+$ 2^{31}-1 = 2,147,483,647 $
+
+(c) sign/magnitude numbers?\\
+$ 2^{31}-1 = 2,147,483,647 $ \\
+
+\textbf{1.12} What is the smallest (most negative) 32-bit binary number that can be represented with\\
+(a) unsigned numbers?\\
+If you can't have a sign, either it's impossible to have a negative value, or you assume that all values are negative. A negative-int data type I suppose.
+$ -2^{32}-1 = -4,294,967,295 $
+
+(b) two's complement numbers?\\
+$ -2^{31} = -2,147,483,648 $
+
+(c) sign/magnitude numbers?\\
+$ -2^{31}-1 = -2,147,483,647 $ \\
+
+\textbf{1.14} Convert the following unsigned binary numbers to decimal.\\
+(a) $ 1110_{2} $ \\
+$ 2^{3} + 2^{2} + 2^{1} + 0 = 14 $ \\
+(b) $ 10 0100_{2} $ \\
+$ 2^{5} + 2^{2} = 36 $ \\
+(c) $ 1101 0111_{2} $ \\
+$ 2^{7} + 2^{6} + 2^{4} + 2^{2} + 2^{1} + 2{0} = 215 $ \\
+(d) $ 011 1010 1010 0100_{2} $ \\
+$ 2^{13} + 2^{12} + 2^{11} + 2^{9} + 2^{7} + 2^{5} + 2^{2} = 15,012 $ \\
+
+\textbf{1.16} Repeat 1.14, but convert to hexadecimal. \\
+Since they are split into 4 bit sections, just match each section with it's hex digit.\\
+(a) $ 1110_{2} $ \\
+$ 0xE $ \\
+(b) $ 10\:0100_{2} $ \\
+$ 0x24 $ \\
+(c) $ 1101\:0111_{2} $ \\
+$ 0xD7 $ \\
+(d) $ 011\:1010\:1010\:0100_{2} $ \\
+$ 0x3AA4 $ \\
+
+\textbf{1.18} Convert the following hexadecimal numbers to decimal. \\
+(a) $ 0x4E $ \\
+$ 4*16^{1} + 14*16^{0} = 78 $ \\
+(b) $ 0x7C $ \\
+$ 7*16^{1} + 12*16{0} = 124 $ \\
+(c) $ 0xED3A $ \\
+$ 14*16^{3} + 13*16^{2} + 3*16^{1} + 10*16^{0} = 60,730 $ \\
+(d) $ 0x403FB001 $ \\
+$ 4*16^{7} + 3*16^{5} + 15*16^{4} + 11*16^{3} + 1*16^{0} = 1,077,915,649 $ \\
+
+\textbf{1.20} Repeat 1.18, but convert to unsigned binary. \\
+Simply take each digit, and match it to it's binary equivalent. Then push the resulting sections together. \\
+(a) $ 0x4E $ \\
+$ 0100\: 1110 $ \\
+(b) $ 0x7C $ \\
+$ 0111\: 1100 $ \\
+(c) $ 0xED3A $ \\
+$ 1110\: 1101\: 0011\: 1010 $ \\
+(d) $ 0x403FB001 $ \\
+$ 0100\: 0000\: 0011\: 1111\: 1011\: 0000\: 0000\: 0001 $ \\
+
+\textbf{1.22} Convert the following two's complement binary numbers to decimal. \\
+(a) $ 1110_{2} $ \\ 
+The left most bit is 1, flip the bits, $ 1110 = 0001 $ then add 1. $ 0001 + 0001 = 0010 = 2 $ \\
+Since the left most bit was 1, the result is negative. $ -2 $ \\
+(b) $ 100011_{2} $ \\ 
+$ 011100 + 000001 = 011101 $ \\
+$ 2^{4} + 2^{3} + 2^{2} + 2^{0} = -29 $ \\
+(c) $ 01001110_{2} $ \\ 
+The left most bit is 0, so this is a positive number. Continue as normal. \\
+$ 2^{6} + 2^{3} + 2^{2} + 2^{1} = 78 $ \\
+(d) $ 10110101_{2} $ \\ 
+$ 01001010 + 00000001 = 01001011 $ \\
+$  2^{6} + 2^{3} + 2^{1} + 2^{0} = -75 $ \\
+
+\textbf{1.26} Convert the following decimal numbers to unsigned binary numbers. \\
+
+\textbf{1.28} Repeat Exercise 1.26, but convert to hexadecimal. \\
+
+\textbf{1.30} Convert the following decimal numbers to 8-bit two's complement numbers or indicate that the decimal number would overflow the range. \\
+
+\textbf{1.34} Convert the following 4-bit two's complement numbers to 8-bit two's complement numbers. \\
+
+\textbf{1.36} Repeat Exercise 1.34 if the numbers are unsigned rather than two's complement. \\
+
+
+
+
+
+
+
+
+\end{normalsize}
+
+\end{document}
