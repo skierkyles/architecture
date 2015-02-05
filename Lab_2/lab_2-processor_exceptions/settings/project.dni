@@ -38,10 +38,10 @@ ShowSource=1
 Freq=10000000
 MultiCoreRunAll=1
 [LMIFTDI]
-LMIFTDIserialNo=0E20AE4F
+LMIFTDIserialNo=0E210138
 LMIFTDIfoundProbes=
 [DebugChecksum]
-Checksum=-543743873
+Checksum=1154649153
 [Exceptions]
 StopOnUncaught=_ 0
 StopOnThrow=_ 0

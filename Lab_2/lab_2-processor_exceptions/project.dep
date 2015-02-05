@@ -7,16 +7,16 @@
     <name>Debug</name>
     <outputs>
       <file>$PROJ_DIR$\main.s</file>
-      <file>$PROJ_DIR$\Debug\Exe\asm.out</file>
       <file>$PROJ_DIR$\Debug\Obj\main.o</file>
       <file>$TOOLKIT_DIR$\config\linker\TexasInstruments\TM4C123GH6.icf</file>
+      <file>$PROJ_DIR$\Debug\Exe\asm.out</file>
     </outputs>
     <file>
       <name>[ROOT_NODE]</name>
       <outputs>
         <tool>
           <name>ILINK</name>
-          <file> 1</file>
+          <file> 3</file>
         </tool>
       </outputs>
     </file>
@@ -25,7 +25,7 @@
       <outputs>
         <tool>
           <name>AARM</name>
-          <file> 2</file>
+          <file> 1</file>
         </tool>
       </outputs>
     </file>
@@ -34,7 +34,7 @@
       <inputs>
         <tool>
           <name>ILINK</name>
-          <file> 3 2</file>
+          <file> 2 1</file>
         </tool>
       </inputs>
     </file>
