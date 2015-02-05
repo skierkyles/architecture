@@ -339,19 +339,35 @@ $ -32 = 100000 $ \\
 $ 000011 + 100000 = 100011 = -29 $ \\
 
 (e) -16 + -9 \\
-$ $ \\
-$ $ \\
+$ -16 = 010000 = 101111 + 0001 = 110000 $ \\
+$ -9 = 001001 = 110110 + 0001 = 110111 $ \\
+$ 110000 + 110111 = 1\: 100111 $ \\
+$ 100111 = -25 $, one extra bit is tossed out, but it isn't needed. \\
 
 (f) -27 + -31 \\
-$ $ \\
-$ $ \\
+$ 27 = 011011 = 100101 = -27 $ \\
+$ 31 = 011111 = 100001 = -31 $ \\ 
+$ 100101 + 100001 = 000110 = 6 $ \\
+This overflows, it would need 7-bits to properly represent -58. \\
 
 \textbf{1.58} Perform the following additions of unsigned hexadecimal numbers. Indicate whether or not the sum overflows an 8bit (two hex digit) result. \\
+(a) 0x7 + 0x9 \\
+(b) 0x13 + 0x28 \\
+(c) 0xAB + 0x3E \\
+(d) 0x8F + 0xAD \\
+
 
 \textbf{1.60} Convert the following decimal numbers to 5-bit two's complement binary numbers and subtract them. Indicate whether or not the difference overflows a 5-bit result. \\
+(a) 9 - 7 \\
+(b) 12 -15 \\
+(c) -6 - 11 \\
+(d) 4 -- 8 \\
 
 \textbf{1.65} Answer the following questions related to \textit{Binary Coded Decimal} systems. \\
-
+(a) Write 371 in BCD \\
+(b) Convert $ 000110000111_{BCD} $ to decimal. \\
+(c) Convert $ 10010101_{BCD} $ to binary \\
+(d) Explain the disadvantage of BCD when compared to binary representation of numbers. \\
 
 
 
