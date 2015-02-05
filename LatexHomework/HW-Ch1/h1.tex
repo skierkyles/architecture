@@ -149,17 +149,208 @@ $ 52 = 0011\: 0100 = 0x34$ \\
 $ 339 = 0001\: 0101\: 0011 = 0x153 $\\
 
 (d) 711 \\
-$ 711 = 0010\: 1100\: 0111 = 0x2C7 $
+$ 711 = 0010\: 1100\: 0111 = 0x2C7 $ \\
 
 \textbf{1.30} Convert the following decimal numbers to 8-bit two's complement numbers or indicate that the decimal number would overflow the range. \\
+(a) 24 \\
+$ 24/16 = 1r8 $ \\
+$ 24 = 0x18 = 0001\: 1000 $ \\
+Since it's positive, the leading bit should be 0. \\
 
+(b) -59 \\
+$ 59/16 = 3r11 $ \\
+$ 59 = 0x3B = 0011\: 1011 $ \\
+Invert bits and add 1 \\
+$ 1100\: 0100 + 0001 = 1100\: 0101 $ \\
+
+(c) 128 \\
+$ 128/16 = 8r0 $ \\
+$ 128 = 0x80 = 1000\: 0000 $ \\
+But, we have a problem. Since 128 on it's own takes up 8 bits, this would read as $ -128 $ in two's complement. With only 8bits, there is no way to represent +128. \emph{Overflow} \\
+
+(d) -150 \\
+$ 150/16 = 9r6 $ \\
+$ 150 = 0x96 = 1001\: 0110 $ \\
+Invert and add 1, $ 0110\: 1001 + 0001 = 0110\: 1010 $ \\
+Again, since we only have 8 bits, this causes an \emph{overflow}. \\
+
+(e) 127 \\
+$ 127/16 = 7r15 $ \\
+$ 127 = 0x7F = 0111\: 1111 $ \\
+Luckily, this does not overflow, but it is at the end of an 8bit two's complement numbers range. \\
 
 \textbf{1.34} Convert the following 4-bit two's complement numbers to 8-bit two's complement numbers. \\
+(a) 0111 \\
+Since this is a positive number nothing needs to be changed. \\ 
+$ 0000\: 0111 $ \\
+
+(b) 1001 \\ 
+Just add 1's to the bits in front, since this is a negative number. \\
+$ 1111\: 1001 $ \\
 
 \textbf{1.36} Repeat Exercise 1.34 if the numbers are unsigned rather than two's complement. \\
+I'm not completely sure I understand this question. Are we converting two's complement numbers to 8bit unsigned? Or 4bit unsigned to 8bit two's complement? Or just unsigned to unsigned? \\
+Either way, the answer should just be the original plus 0000 at the front. This is since, if they are unsigned to start with, they are positive, and therefore the two's will be positive. If they are two's moving to unsigned, \emph{b} just doesn't really make sense. Anyway, here's the answer assuming they are unsigned, moving to two's complement. \\ \\
+(a) 0111 \\
+$ 0000\: 0111 $ \\ \\
+(b) 1001 \\
+$ 0000\: 1001 $ \\
 
+\textbf{1.38} Base 8 is referred to as octal. Convert each of the numbers from 1.26 to octal. \\
+(a) 14 \\
+$ 14/8 = 1r6 $ \\
+$ 1/8 = 0r1 $ \\
+$ 14 = 016 $ \\
 
+(b) 52 \\
+$ 52/8 = 6r4 $ \\
+$ 6/8 = 0r6 $
+$ 52 = 064 $ \\
 
+(c) 339 \\
+$ 339/8 = 42r3 $ \\
+$ 42/8 = 5r2 $ \\
+$ 5/8 = 0r5 $ \\
+$ 339 = 0523 $ \\
+
+(d) 711 \\
+$ 711/8 = 88r7 $ \\
+$ 88/8 = 11r0 $ \\
+$ 11/8 = 1r3 $ \\
+$ 1/8 = 0r1 $ \\
+$ 711 = 01307 $ \\
+
+\textbf{1.40} Convert each of the following octal numbers to binary, hexadecimal, and decimal. \\
+In the following questions, converting to binary, then binary to hex is easiest. \\
+
+(a) 023 \\
+binary: $ 010\: 011 $ \\
+hex: $ 0x13 $ \\
+decimal: $ 2*8^{1} + 3*8^{0} = 19 $ \\
+
+(b) 045 \\
+binary: $ 100\: 101 $ \\
+hex: $ 0x25 $ \\
+decimal: $ 4*8^{1} + 5*8^{0} = 37 $ \\
+
+(c) 0371 \\
+binary: $ 011\: 111\: 001 $ \\
+hex: $ 0\: 1111\: 1001\: = 0xF9 $ \\
+decimal: $ 3*8^{2} + 7*8^{1} + 1*8^{0} = 249 $ \\
+
+(d) 02560 \\
+binary: $ 010\: 101\: 110\: 000 $ \\
+hex: $ 0101\: 0111\: 0000 = 0x570 $ \\
+decimal: $ 2*8^{3} + 5*8^{2} + 6*8^{1} + 0*8^{0} = 1392 $ \\
+
+\textbf{1.42} How many 7-bit two's complement numbers are greater than 0? How many numbers are less than 0 \\
+The range of a 7-bit two's complement number is 
+$ -(2^{6})\: to\: 2^{6}-1 $, which is $ -64\: to\: 63 $ \\
+So the number \textbf{greater} than 0, is 63, and the number \textbf{less} is 64. \\
+
+\textbf{1.44} How many bytes are in a 64-bit word? \\
+8-bits to one byte. Therefore, $ 64/8 = 8\: bytes $ \\
+
+\textbf{1.50} Draw a line number analogous to Figure 1.11 for 3-bit unsigned, two's complement, and sign/magnitude numbers. \\
+TODO! TODO! \\
+
+\textbf{1.52} Perform the following additions of unsigned binary numbers. Indicate whether or not the sum overflows a 4-bit result. \\
+(a) $ 1011 + 0100 $ \\
+$ 1111 $ \\
+
+(b) $ 1101 + 1011 $ \\
+\begin{tabular}{c@{\,}c@{\,}c@{\,}c@{\,}c}
+  & 1 & 1 & 1 & \\
+  & 1 & 1 & 0 & 1 \\
++ & 1 & 0 & 1 & 1 \\
+\hline
+1 & 1 & 0 & 0 & 0 \\
+\end{tabular} \\
+This does \emph{overflow} the 4-bit result. The 4-bit version would simply be $ 1000 $ \\
+
+\textbf{1.54} Repeat exercise 1.52, assuming that the binary numbers are in two's complement form. \\
+(a) $ 1011 + 0100 $ \\
+$ 1011 = -5 $ \\
+$ 0100 = 4 $ \\
+$ 1011 + 0100 = 1111 = -1 $ \\
+
+(b) $ 1101 + 1011 $ \\
+$ 1101 = -3 $ \\
+$ 1011 = -5 $ \\
+\begin{tabular}{c@{\,}c@{\,}c@{\,}c@{\,}c}
+  & 1 & 1 & 1 & \\
+  & 1 & 1 & 0 & 1 \\
++ & 1 & 0 & 1 & 1 \\
+\hline
+1 & 1 & 0 & 0 & 0 \\
+\end{tabular} \\
+While it does overflow, in this instance, $ 1000 = -8 $, so the answer is still correct. \\
+
+\textbf{1.56} Convert the following decimal numbers to 6-bit two's complement binary numbers and add them. Indicate whether or not the sum overflows a 6-bit result. \\
+(a) 16 + 9 \\
+$ 16 = 010000 $ \\
+$ 9 = 001001 $ \\
+$ 010000 + 001001 = 011001 $ \\
+
+(b) 27 + 31 \\
+$ 27/2 = 13r1 $ \\
+$ 13/2 = 6r1 $ \\
+$ 6/2 = 3r0 $ \\
+$ 3/2 = 1r1 $ \\
+$ 1/2 = 0r1 $ \\
+$ 27 = 011011 $ \\
+$ 31/2 = 15r1 $ \\
+$ 15/2 = 7r1 $ \\
+$ 7/2 = 3r1 $ \\
+$ 3/2 = 1r1 $ \\
+$ 1/2 = 0r1 $ \\
+$ 31 = 011111 $ \\ \\
+\begin{tabular}{c@{\,}c@{\,}c@{\,}c@{\,}c@{\,}c@{\,}c}
+  & 1 & 1 & 1 & 1 & 1 & \\
+  & 0 & 1 & 1 & 0 & 1 & 1 \\
++ & 0 & 1 & 1 & 1 & 1 & 1 \\
+\hline
+  & 1 & 1 & 1 & 0 & 1 & 0 \\
+\end{tabular} \\
+$ 111010 = -6 $ \\
+Even though there are no lost bits, since they msb is set to 1, with not enough bits for a leading 0. This is represented as a -6, which is incorrect. \\
+
+(c) -4 + 19 \\
+$ -4 = 000100 = 111011 + 0001 = 111100 $ \\
+$ 19/2 = 9r1 $ \\
+$ 9/2 = 4r1 $ \\
+$ 4/2 = 2r0 $ \\
+$ 2/2 = 1r0 $ \\
+$ 1/2 = 0r1$ \\
+$ 19 = 010011 $ \\ 
+\begin{tabular}{c@{\,}c@{\,}c@{\,}c@{\,}c@{\,}c@{\,}c}
+1 & 1 &   &   &   &   & \\
+  & 1 & 1 & 1 & 1 & 0 & 0 \\
++ & 0 & 1 & 0 & 0 & 1 & 1 \\
+\hline
+1 & 0 & 0 & 1 & 1 & 1 & 1 \\
+\end{tabular} \\
+This overflows properly, since -4 + 19 is a positive number, the msb should be 0. \\
+$ 001111 = 15 $ \\
+
+(d) 3 + -32 \\
+$ 3 = 000011 $ \\
+$ -32 = 100000 $ \\
+$ 000011 + 100000 = 100011 = -29 $ \\
+
+(e) -16 + -9 \\
+$ $ \\
+$ $ \\
+
+(f) -27 + -31 \\
+$ $ \\
+$ $ \\
+
+\textbf{1.58} Perform the following additions of unsigned hexadecimal numbers. Indicate whether or not the sum overflows an 8bit (two hex digit) result. \\
+
+\textbf{1.60} Convert the following decimal numbers to 5-bit two's complement binary numbers and subtract them. Indicate whether or not the difference overflows a 5-bit result. \\
+
+\textbf{1.65} Answer the following questions related to \textit{Binary Coded Decimal} systems. \\
 
 
 
