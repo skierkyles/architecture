@@ -3,6 +3,8 @@
 \usepackage[fleqn]{amsmath}
 \usepackage{amsfonts}
 \usepackage{amssymb}
+\usepackage{graphicx}
+
 \author{Kyle Swanson}
 \title{Chapter 1 Exercises: Number Systems}
 \setlength{\parindent}{0cm}
@@ -252,7 +254,7 @@ So the number \textbf{greater} than 0, is 63, and the number \textbf{less} is 64
 8-bits to one byte. Therefore, $ 64/8 = 8\: bytes $ \\
 
 \textbf{1.50} Draw a line number analogous to Figure 1.11 for 3-bit unsigned, two's complement, and sign/magnitude numbers. \\
-TODO! TODO! \\
+\includegraphics[scale=0.8]{Number_line.png} 
 
 \textbf{1.52} Perform the following additions of unsigned binary numbers. Indicate whether or not the sum overflows a 4-bit result. \\
 (a) $ 1011 + 0100 $ \\
@@ -291,6 +293,7 @@ While it does overflow, in this instance, $ 1000 = -8 $, so the answer is still 
 $ 16 = 010000 $ \\
 $ 9 = 001001 $ \\
 $ 010000 + 001001 = 011001 $ \\
+Does not overflow
 
 (b) 27 + 31 \\
 $ 27/2 = 13r1 $ \\
@@ -313,7 +316,7 @@ $ 31 = 011111 $ \\ \\
   & 1 & 1 & 1 & 0 & 1 & 0 \\
 \end{tabular} \\
 $ 111010 = -6 $ \\
-Even though there are no lost bits, since they msb is set to 1, with not enough bits for a leading 0. This is represented as a -6, which is incorrect. \\
+Overflows. Even though there are no lost bits, since they msb is set to 1, with not enough bits for a leading 0. This is represented as a -6, which is incorrect. \\
 
 (c) -4 + 19 \\
 $ -4 = 000100 = 111011 + 0001 = 111100 $ \\
@@ -330,19 +333,21 @@ $ 19 = 010011 $ \\
 \hline
 1 & 0 & 0 & 1 & 1 & 1 & 1 \\
 \end{tabular} \\
-This overflows properly, since -4 + 19 is a positive number, the msb should be 0. \\
+No overflow, since -4 + 19 is a positive number, the msb should be 0. \\
 $ 001111 = 15 $ \\
 
 (d) 3 + -32 \\
 $ 3 = 000011 $ \\
 $ -32 = 100000 $ \\
 $ 000011 + 100000 = 100011 = -29 $ \\
+Does not overflow \\
 
 (e) -16 + -9 \\
 $ -16 = 010000 = 101111 + 0001 = 110000 $ \\
 $ -9 = 001001 = 110110 + 0001 = 110111 $ \\
 $ 110000 + 110111 = 1\: 100111 $ \\
 $ 100111 = -25 $, one extra bit is tossed out, but it isn't needed. \\
+Does not overflow \\
 
 (f) -27 + -31 \\
 $ 27 = 011011 = 100101 = -27 $ \\
@@ -352,25 +357,136 @@ This overflows, it would need 7-bits to properly represent -58. \\
 
 \textbf{1.58} Perform the following additions of unsigned hexadecimal numbers. Indicate whether or not the sum overflows an 8bit (two hex digit) result. \\
 (a) 0x7 + 0x9 \\
-(b) 0x13 + 0x28 \\
-(c) 0xAB + 0x3E \\
-(d) 0x8F + 0xAD \\
+\begin{tabular}{c@{\,}c@{\,}c@{\,}c}
+  & & 1 &     \\
+  & &   & 7 \\
++ & &   & 9 \\
+\hline
+  & & 1 & 0 \\
+\end{tabular} \\
+0x10 \\
+Does not overflow. \\
 
+(b) 0x13 + 0x28 \\
+\begin{tabular}{c@{\,}c@{\,}c@{\,}c}
+  & &   &     \\
+  & & 1 & 3 \\
++ & & 2 & 8 \\
+\hline
+  & & 3 & B \\
+\end{tabular} \\
+0x3B \\
+Does not overflow \\
+
+(c) 0xAB + 0x3E \\
+\begin{tabular}{c@{\,}c@{\,}c@{\,}c}
+  & & 1 &     \\
+  & & A & B \\
++ & & 3 & E \\
+\hline
+  & & E & 9 \\
+\end{tabular} \\
+0xE9 \\
+Does not overflow \\
+
+(d) 0x8F + 0xAD \\
+\begin{tabular}{c@{\,}c@{\,}c@{\,}c}
+  & 1 & 1 &     \\
+  &  & A & D \\
++ &  & 8 & F \\
+\hline
+  & 1 & 3 & C \\
+\end{tabular} \\
+0x13C \\
+Overflows \\
 
 \textbf{1.60} Convert the following decimal numbers to 5-bit two's complement binary numbers and subtract them. Indicate whether or not the difference overflows a 5-bit result. \\
 (a) 9 - 7 \\
+$ 9 = 01001 $ \\
+$ 7 = 00111 $ \\
+$ -7 = 11000 + 00001 = 11001 $ \\
+\begin{tabular}{c@{\,}c@{\,}c@{\,}c@{\,}c@{\,}c}
+1 & 1 &   &   & 1 & \\
+  & 0 & 1 & 0 & 0 & 1 \\
++ & 1 & 1 & 0 & 0 & 1 \\
+\hline
+1 & 0 & 0 & 0 & 1 & 0 \\
+\end{tabular} \\
+Does not overflow \\
+$ 100010 = 2 $ \\
+
 (b) 12 -15 \\
+$ 12 = 01100 $ \\
+$ 15 = 01111 $ \\
+$ -15 = 10001 $ \\
+\begin{tabular}{c@{\,}c@{\,}c@{\,}c@{\,}c@{\,}c}
+  &   &   &   &   & \\
+  & 0 & 1 & 1 & 0 & 0 \\
++ & 1 & 0 & 0 & 0 & 1 \\
+\hline
+  & 1 & 1 & 1 & 0 & 1 \\
+\end{tabular} \\
+Does not overflow \\
+$ 11101 = -3 $ \\
+
 (c) -6 - 11 \\
+$ 6 = 00110 $ \\
+$ -6 = 11010 $ \\
+$ 11 = 01011 $ \\
+$ -11 = 10101 $ \\
+\begin{tabular}{c@{\,}c@{\,}c@{\,}c@{\,}c@{\,}c}
+1 &   &   &   &   & \\
+  & 1 & 1 & 0 & 1 & 0 \\
++ & 1 & 0 & 1 & 0 & 1 \\
+\hline
+1 & 0 & 1 & 1 & 1 & 1 \\
+\end{tabular} \\
+This overflows, it also gives an incorrect result. Since -6 - 11 requires more than 5 bits. \\
+$ 01111 = 15 $ \\
+
 (d) 4 -- 8 \\
+$ 4 = 00100 $ \\
+$ 8 = 01000 $ \\
+$ -8 = 11000 $ \\
+\begin{tabular}{c@{\,}c@{\,}c@{\,}c@{\,}c@{\,}c}
+  &   &   &   &   & \\
+  & 0 & 0 & 1 & 0 & 0 \\
++ & 0 & 1 & 0 & 0 & 0 \\
+\hline
+  & 0 & 1 & 1 & 0 & 0 \\
+\end{tabular} \\
+Does not overflow \\
+$ 01100 = 12 $ \\
 
 \textbf{1.65} Answer the following questions related to \textit{Binary Coded Decimal} systems. \\
 (a) Write 371 in BCD \\
+$ 3 = 0011 $ \\
+$ 7 = 0111 $ \\
+$ 1 = 0001 $ \\
+$ 001101110001 $ \\ 
+
 (b) Convert $ 000110000111_{BCD} $ to decimal. \\
+$ 0001 = 1 $ \\
+$ 1000 = 8 $ \\
+$ 0111 = 7 $ \\
+$ 000110000111 = 187 $ \\
+
 (c) Convert $ 10010101_{BCD} $ to binary \\
+$ 1001 = 9 $ \\
+$ 0101 = 5 $ \\
+$ 95/2 = 47r1 $ \\
+$ 47/2 = 23r1 $ \\
+$ 23/2 = 11r1 $ \\
+$ 11/2 = 5r1 $ \\
+$ 5/2 = 2r1 $ \\
+$ 2/2 = 1r0 $ \\
+$ 1/2 = 0r1 $ \\
+$ 95 = 1011111 $ \\
+
 (d) Explain the disadvantage of BCD when compared to binary representation of numbers. \\
-
-
-
+It takes more bits to store the same number. \\
+Take the example above. 95 in binary requires 7 bits, where the BCD version requires 8. \\
+8 bits in BCD only get you up to 99. But 8 bits with binary can get you all the way to 255. \\
 
 \end{normalsize}
 
