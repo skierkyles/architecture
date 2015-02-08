@@ -47,7 +47,7 @@ $ 2^{3} + 2^{2} + 2^{1} + 0 = 14 $ \\
 (b) $ 10 0100_{2} $ \\
 $ 2^{5} + 2^{2} = 36 $ \\
 (c) $ 1101 0111_{2} $ \\
-$ 2^{7} + 2^{6} + 2^{4} + 2^{2} + 2^{1} + 2{0} = 215 $ \\
+$ 2^{7} + 2^{6} + 2^{4} + 2^{2} + 2^{1} + 2^{0} = 215 $ \\
 (d) $ 011 1010 1010 0100_{2} $ \\
 $ 2^{13} + 2^{12} + 2^{11} + 2^{9} + 2^{7} + 2^{5} + 2^{2} = 15,012 $ \\
 
@@ -66,7 +66,7 @@ $ 0x3AA4 $ \\
 (a) $ 0x4E $ \\
 $ 4*16^{1} + 14*16^{0} = 78 $ \\
 (b) $ 0x7C $ \\
-$ 7*16^{1} + 12*16{0} = 124 $ \\
+$ 7*16^{1} + 12*16^{0} = 124 $ \\
 (c) $ 0xED3A $ \\
 $ 14*16^{3} + 13*16^{2} + 3*16^{1} + 10*16^{0} = 60,730 $ \\
 (d) $ 0x403FB001 $ \\
@@ -75,27 +75,27 @@ $ 4*16^{7} + 3*16^{5} + 15*16^{4} + 11*16^{3} + 1*16^{0} = 1,077,915,649 $ \\
 \textbf{1.20} Repeat 1.18, but convert to unsigned binary. \\
 Simply take each digit, and match it to it's binary equivalent. Then push the resulting sections together. \\
 (a) $ 0x4E $ \\
-$ 0100\: 1110 $ \\
+$ 0100\: 1110 $ \\ \\
 (b) $ 0x7C $ \\
-$ 0111\: 1100 $ \\
+$ 0111\: 1100 $ \\ \\
 (c) $ 0xED3A $ \\
-$ 1110\: 1101\: 0011\: 1010 $ \\
+$ 1110\: 1101\: 0011\: 1010 $ \\ \\
 (d) $ 0x403FB001 $ \\
-$ 0100\: 0000\: 0011\: 1111\: 1011\: 0000\: 0000\: 0001 $ \\
+$ 0100\: 0000\: 0011\: 1111\: 1011\: 0000\: 0000\: 0001 $ \\ \\
 
 \textbf{1.22} Convert the following two's complement binary numbers to decimal. \\
 (a) $ 1110_{2} $ \\ 
 The left most bit is 1, flip the bits, $ 1110 = 0001 $ then add 1. $ 0001 + 0001 = 0010 = 2 $ \\
-Since the left most bit was 1, the result is negative. $ -2 $ \\
+Since the left most bit was 1, the result is negative. $ -2 $ \\ \\
 (b) $ 100011_{2} $ \\ 
 $ 011100 + 000001 = 011101 $ \\
-$ 2^{4} + 2^{3} + 2^{2} + 2^{0} = -29 $ \\
+$ 2^{4} + 2^{3} + 2^{2} + 2^{0} = -29 $ \\ \\
 (c) $ 01001110_{2} $ \\ 
 The left most bit is 0, so this is a positive number. Continue as normal. \\
-$ 2^{6} + 2^{3} + 2^{2} + 2^{1} = 78 $ \\
+$ 2^{6} + 2^{3} + 2^{2} + 2^{1} = 78 $ \\ \\
 (d) $ 10110101_{2} $ \\ 
 $ 01001010 + 00000001 = 01001011 $ \\
-$  2^{6} + 2^{3} + 2^{1} + 2^{0} = -75 $ \\
+$  2^{6} + 2^{3} + 2^{1} + 2^{0} = -75 $ \\ \\
 
 \textbf{1.26} Convert the following decimal numbers to unsigned binary numbers. \\
 (a) 14 \\
@@ -206,7 +206,7 @@ $ 14 = 016 $ \\
 
 (b) 52 \\
 $ 52/8 = 6r4 $ \\
-$ 6/8 = 0r6 $
+$ 6/8 = 0r6 $ \\
 $ 52 = 064 $ \\
 
 (c) 339 \\
@@ -286,14 +286,14 @@ $ 1011 = -5 $ \\
 \hline
 1 & 1 & 0 & 0 & 0 \\
 \end{tabular} \\
-While it does overflow, in this instance, $ 1000 = -8 $, so the answer is still correct. \\
+The far left bit is lost, but it isn't needed in this instance, $ 1000 = -8 $, so the answer is still correct. \\
 
 \textbf{1.56} Convert the following decimal numbers to 6-bit two's complement binary numbers and add them. Indicate whether or not the sum overflows a 6-bit result. \\
 (a) 16 + 9 \\
 $ 16 = 010000 $ \\
 $ 9 = 001001 $ \\
 $ 010000 + 001001 = 011001 $ \\
-Does not overflow
+Does not overflow \\
 
 (b) 27 + 31 \\
 $ 27/2 = 13r1 $ \\
