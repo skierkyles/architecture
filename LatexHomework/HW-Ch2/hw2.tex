@@ -1,0 +1,107 @@
+\documentclass[12pt,a4paper]{report}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{lmodern}
+
+\setlength{\parindent}{0cm}
+
+\author{Kyle Swanson}
+\title{Chapter 2 Exercises: Combinational Logic and Boolean Algebra }
+
+\begin{document}
+\maketitle
+
+\begin{normalsize}
+
+
+\textbf{2.2} Write a Boolean equation in sum-of-products canonical form for each of the truth tables in Figure 2.81. \\
+
+To determine this, look where Y = 1. Then just put complemented or not A, B, C, or D AND'ED together (Ex: If B = 0, complement it.). That is, turn the inputs to 1. And OR the results. \\
+
+(a) $ \overline{A}B = 1 $ , $ A\overline{B} = 1 $, $ AB = 1 $. Therefore \\ 
+$ Y = \overline{A}B + A\overline{B} + AB $ \\
+
+(b) $ Y = \overline{A}\overline{B}C + \overline{A}B\overline{C} + \overline{A}BC + A\overline{B}\overline{C} + AB\overline{C}$ \\
+
+(c) $ Y = \overline{A}\overline{B}C + AB\overline{C} + ABC $ \\
+
+(d) $ Y = \overline{A}\overline{B}\overline{C}\overline{D} + \overline{A}\overline{B}C\overline{D} + \overline{A}\overline{B}CD + \overline{A}BC\overline{D} + \overline{A}BCD + A\overline{B}\overline{C}\overline{D} + A\overline{B}C\overline{D} $ \\
+
+(e) $ Y = \overline{A}\overline{B}CD + \overline{A}BC\overline{D} + \overline{A}BCD + A\overline{B}\overline{C}\overline{D} + A\overline{B}\overline{C}D + A\overline{B}C\overline{D} + A\overline{B}CD $ \\
+
+\textbf{2.4} Write a Boolean equation in product-of-sums canonical form for the truth tables in 2.81. \\
+
+To determine this, look where Y = 0. Then just put complemented or not A, B, C, or D OR'ED together (Ex: If B = 0, do not complement it.). That is, turn the inputs to 0. And AND the results. \\
+
+(a) $ Y = (A + B) $ \\
+
+(b) $ Y = (A + B + C) (\overline{A} + B + \overline{C}) (\overline{A} + \overline{B} + \overline{C}) $ \\
+
+(c) $ Y = (A + B + C) (A + \overline{B} + C) (A + \overline{B} + \overline{C}) (\overline{A} + B + C) (\overline{A} + B + \overline{C}) $ \\
+
+(d) $ Y = (A + B + C + \overline{D}) (A + \overline{B} + C + D) (A + \overline{B} + C + \overline{D}) (\overline{A} + B + C + \overline{D}) (\overline{A} + B + \overline{C} + \overline{D}) (\overline{A} + \overline{B} + C + D) (\overline{A} + \overline{B} + C + \overline{D}) (\overline{A} + \overline{B} + \overline{C} + D) (\overline{A} + \overline{B} + \overline{C} + \overline{D}) $ \\
+
+(e) $ Y = (A + B + C + D) (A + B + C + \overline{D}) (A + B + \overline{C} + D) (A + \overline{B} + C + D) (A + \overline{B} + C + \overline{D}) (\overline{A} + \overline{B} + C + D) (\overline{A} + \overline{B} + C + \overline{D}) (\overline{A} + \overline{B} + \overline{C} + D) (\overline{A} + \overline{B} + \overline{C} + \overline{D}) $ \\
+
+\textbf{2.6} Minimize each of the Boolean equations from Exercise 2.2. \\
+(a) $ Y = \overline{A}B + A\overline{B} + AB $ \\
+
+(b) $ Y = \overline{A}\overline{B}C + \overline{A}B\overline{C} + \overline{A}BC + A\overline{B}\overline{C} + AB\overline{C}$ \\
+
+(c) $ Y = \overline{A}\overline{B}C + AB\overline{C} + ABC $ \\
+
+(d) $ Y = \overline{A}\overline{B}\overline{C}\overline{D} + \overline{A}\overline{B}C\overline{D} + \overline{A}\overline{B}CD + \overline{A}BC\overline{D} + \overline{A}BCD + A\overline{B}\overline{C}\overline{D} + A\overline{B}C\overline{D} $ \\
+
+(e) $ Y = \overline{A}\overline{B}CD + \overline{A}BC\overline{D} + \overline{A}BCD + A\overline{B}\overline{C}\overline{D} + A\overline{B}\overline{C}D + A\overline{B}C\overline{D} + A\overline{B}CD $ \\
+
+
+\textbf{2.8} Sketch a reasonably simple combinational circuit implementing each of the functions from Exercise 2.6. \\
+
+\textbf{2.14} Simplify the following Boolean equations using Boolean theorems. Check for correctness using a truth table or K-map. \\
+
+(a) $ Y = \overline{A}BC + \overline{A}B\overline{C} $ \\
+
+
+(b) $ Y = \overline{ABC} + A\overline{B} $ \\
+
+(c) $ Y = ABC\overline{D} + A\overline{BCD} + (\overline{A + B + C + D}) $ \\
+
+\textbf{2.16} Sketch a reasonably simple combinational circuit implementing each of the functions from Exercise 2.14.\\
+
+\textbf{2.22} Prove that the following theorems are true using perfect induction. You need not prove their duals.\\
+
+(a) The idempotency theorem (T3) \\
+
+(b) The distributivity theorem (T8) \\
+
+(c) The combining theorem (T10) \\
+
+\end{normalsize}
+
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
