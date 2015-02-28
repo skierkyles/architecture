@@ -6,6 +6,12 @@
 \usepackage{graphicx}
 \usepackage{lmodern}
 
+\newcommand*{\al}{\overline{A}}
+\newcommand*{\bl}{\overline{B}}
+\newcommand*{\cl}{\overline{C}}
+\newcommand*{\dl}{\overline{D}}
+
+
 \setlength{\parindent}{0cm}
 
 \author{Kyle Swanson}
@@ -16,12 +22,11 @@
 
 \begin{normalsize}
 
-
 \textbf{2.2} Write a Boolean equation in sum-of-products canonical form for each of the truth tables in Figure 2.81. \\
 
 To determine this, look where Y = 1. Then just put complemented or not A, B, C, or D AND'ED together (Ex: If B = 0, complement it.). That is, turn the inputs to 1. And OR the results. \\
 
-(a) $ \overline{A}B = 1 $ , $ A\overline{B} = 1 $, $ AB = 1 $. Therefore \\ 
+(a) $ \al{}B = 1 $ , $ A\overline{B} = 1 $, $ AB = 1 $. Therefore \\ 
 $ Y = \overline{A}B + A\overline{B} + AB $ \\
 
 (b) $ Y = \overline{A}\overline{B}C + \overline{A}B\overline{C} + \overline{A}BC + A\overline{B}\overline{C} + AB\overline{C}$ \\
@@ -48,8 +53,23 @@ To determine this, look where Y = 0. Then just put complemented or not A, B, C, 
 
 \textbf{2.6} Minimize each of the Boolean equations from Exercise 2.2. \\
 (a) $ Y = \overline{A}B + A\overline{B} + AB $ \\
+$ = \al{}B + A(\bl{}+B) $ T5'\\
+$ = \al{}B + A $ \\
+Finally, you can remove the $ \al{} $. Due to T1 or T2. See the examples below for justification.\\
+$ = A + B $ \\
+Examples on why $ \al{} $ can be eliminated. \\
+A = 1, B = 1. $ 0\: and\: 1\: or\: 1 = 1 \Leftrightarrow 1\: or\: 1 = 1 $ \\
+A = 0, B = 1. $ 1\: and\: 1\: or\: 0 = 1 \Leftrightarrow 1\: or\: 0 = 1 $ \\
+A = 1, B = 0. $ 0\: and\: 0\: or\: 1 = 1 \Leftrightarrow 0\: or\: 1 = 1 $ \\
+A = 0, B = 0. $ 1\: and\: 0\: or\: 0 = 0 \Leftrightarrow 0\: or\: 0 = 0 $ \\
+See how they're the same? Since $ \al{} $ and B are AND'ed together, $ \al{} $ doesn't matter since it has A on the other side of an OR. \\
 
 (b) $ Y = \overline{A}\overline{B}C + \overline{A}B\overline{C} + \overline{A}BC + A\overline{B}\overline{C} + AB\overline{C}$ \\
+$ = \al{}(\bl{}C + B\cl{} + BC) + \cl{}(A\bl{} + AB) $ T8 \\
+$ = \al{}(C(\bl{}+B) + B\cl{}) + A\cl{} $ T5, T3 \\
+$ = \al{}(B\cl{} + C) + A\cl{} $ \\
+$ = \al{}(B + C) + A\cl{} $ \\
+$ = \al{}B + \al{}C + A\cl{} $ \\
 
 (c) $ Y = \overline{A}\overline{B}C + AB\overline{C} + ABC $ \\
 
