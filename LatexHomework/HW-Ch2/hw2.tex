@@ -6,6 +6,8 @@
 \usepackage{graphicx}
 \usepackage{lmodern}
 
+\graphicspath{ {diagrams/} }
+
 \newcommand*{\al}{\overline{A}}
 \newcommand*{\bl}{\overline{B}}
 \newcommand*{\cl}{\overline{C}}
@@ -72,32 +74,142 @@ $ = \al{}(B + C) + A\cl{} $ \\
 $ = \al{}B + \al{}C + A\cl{} $ \\
 
 (c) $ Y = \overline{A}\overline{B}C + AB\overline{C} + ABC $ \\
+$ = \overline{AB}C + A(B(\cl{}+C)) $ \\ 
+$ = \overline{AB}C + AB $ T5, T3 \\
 
 (d) $ Y = \overline{A}\overline{B}\overline{C}\overline{D} + \overline{A}\overline{B}C\overline{D} + \overline{A}\overline{B}CD + \overline{A}BC\overline{D} + \overline{A}BCD + A\overline{B}\overline{C}\overline{D} + A\overline{B}C\overline{D} $ \\
+$ = $ \\
+
+$ = A\overline{BD} + \overline{BCD} $ \\
 
 (e) $ Y = \overline{A}\overline{B}CD + \overline{A}BC\overline{D} + \overline{A}BCD + A\overline{B}\overline{C}\overline{D} + A\overline{B}\overline{C}D + A\overline{B}C\overline{D} + A\overline{B}CD $ \\
+$ = $ \\
 
 
 \textbf{2.8} Sketch a reasonably simple combinational circuit implementing each of the functions from Exercise 2.6. \\
+(a) $ Y = A + B $ \\
+\includegraphics[scale=1]{2_8A}
+
+(b) $ Y = \al{}B + \al{}C + A\cl{} $ \\
+\includegraphics[scale=1]{2_8B}
+
+(c) $ Y = \overline{AB}C + AB $ \\
+\includegraphics[scale=1]{2_8C}
+
+(d) \\
+(e) \\
 
 \textbf{2.14} Simplify the following Boolean equations using Boolean theorems. Check for correctness using a truth table or K-map. \\
 
 (a) $ Y = \overline{A}BC + \overline{A}B\overline{C} $ \\
-
+$ = \al{}B(C + \cl{}) $ \\
+$ = \al{}B $ \\ \\
+\begin{tabular}{|c|c|c|c|c|}
+A & B & C & $ \al{}BC+\al{}B\cl{} $ & $ \al{}B $ \\ 
+\hline 
+1 & 1 & 1 & 0 & 0 \\ 
+\hline 
+1 & 1 & 0 & 0 & 0 \\ 
+\hline 
+1 & 0 & 1 & 0 & 0 \\ 
+\hline 
+1 & 0 & 0 & 0 & 0 \\ 
+\hline 
+0 & 1 & 1 & 1 & 1 \\ 
+\hline 
+0 & 1 & 0 & 1 & 1 \\ 
+\hline 
+0 & 0 & 1 & 0 & 0 \\ 
+\hline 
+0 & 0 & 0 & 0 & 0 \\ 
+\hline 
+\end{tabular} \\
 
 (b) $ Y = \overline{ABC} + A\overline{B} $ \\
+$ = \bl{}(\overline{AC} + A) $ \\
+$ = \bl{}(A + \cl{}) $ \\
+$ = A\bl{} + \overline{BC} $ \\ \\
+\begin{tabular}{|c|c|c|c|c|}
+A & B & C & $ \overline{ABC} + A\overline{B} $ & $ A\bl{} + \overline{BC} $ \\ 
+\hline 
+1 & 1 & 1 & 0 & 0 \\ 
+\hline 
+1 & 1 & 0 & 0 & 0 \\ 
+\hline 
+1 & 0 & 1 & 1 & 1 \\ 
+\hline 
+1 & 0 & 0 & 1 & 1 \\ 
+\hline 
+0 & 1 & 1 & 0 & 0 \\ 
+\hline 
+0 & 1 & 0 & 0 & 0 \\ 
+\hline 
+0 & 0 & 1 & 0 & 0 \\ 
+\hline 
+0 & 0 & 0 & 1 & 1 \\ 
+\hline 
+\end{tabular} \\
+
 
 (c) $ Y = ABC\overline{D} + A\overline{BCD} + (\overline{A + B + C + D}) $ \\
 
 \textbf{2.16} Sketch a reasonably simple combinational circuit implementing each of the functions from Exercise 2.14.\\
+(a) $ = \al{}B $ \\
+\includegraphics[scale=1]{2_16A} \\
+
+(b) $ = A\bl{} + \overline{BC} $ \\
+\includegraphics[scale=1]{2_16B} \\
 
 \textbf{2.22} Prove that the following theorems are true using perfect induction. You need not prove their duals.\\
 
-(a) The idempotency theorem (T3) \\
+For these, build a truth table. Show every option. And so long as the theorem matches with what it claims, it is proved. \\
 
-(b) The distributivity theorem (T8) \\
+(a) The idempotency theorem (T3), $ B \bullet B = B $ \\
+See how '$ B $' matches '$ B \bullet B $'? \\ \\
+\begin{tabular}{|c|c|}
+$ B $ & $ B \bullet B $ \\ 
+\hline 
+0 & 0 \\ 
+\hline 
+1 & 1 \\ 
+\hline 
+\end{tabular} \\ \\
 
-(c) The combining theorem (T10) \\
+(b) The distributivity theorem (T8), $ (B \bullet C) + (B \bullet D) = B \bullet (C + D) $ \\ \\
+\begin{tabular}{|c|c|c|c|c|}
+B & C & D & $ (B \bullet C) + (B \bullet D) $ & $ B \bullet (C + D) $ \\ 
+\hline 
+1 & 1 & 1 & 1 & 1 \\ 
+\hline 
+1 & 1 & 0 & 1 & 1 \\ 
+\hline 
+1 & 0 & 1 & 1 & 1 \\ 
+\hline 
+1 & 0 & 0 & 0 & 0 \\ 
+\hline 
+0 & 1 & 1 & 0 & 0 \\ 
+\hline 
+0 & 1 & 0 & 0 & 0 \\ 
+\hline 
+0 & 0 & 1 & 0 & 0 \\ 
+\hline 
+0 & 0 & 0 & 0 & 0 \\ 
+\hline 
+\end{tabular} \\ \\
+
+(c) The combining theorem (T10), $ (B \bullet C) + (B \bullet \cl{}) = B $ \\ \\
+\begin{tabular}{|c|c|c|c|}
+B & C & $ (B \bullet C) + (B \bullet \cl{}) $ & B \\
+\hline 
+1 & 1 & 1 & 1 \\ 
+\hline 
+1 & 0 & 1 & 1 \\ 
+\hline 
+0 & 1 & 0 & 0 \\ 
+\hline 
+0 & 0 & 0 & 0 \\ 
+\hline 
+\end{tabular} \\ \\
 
 \end{normalsize}
 

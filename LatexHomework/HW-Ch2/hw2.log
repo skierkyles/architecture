@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.2.3)  27 FEB 2015 20:13
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.2.3)  1 MAR 2015 20:23
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -378,19 +378,19 @@ LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
 ) (./hw2.aux)
 \openout1 = `hw2.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
-LaTeX Font Info:    Try loading font information for OT1+lmr on input line 20.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Try loading font information for OT1+lmr on input line 22.
 
 (/usr/share/texmf/tex/latex/lm/ot1lmr.fd
 File: ot1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
@@ -456,63 +456,58 @@ G,.JBIG2,.JB2,.eps]
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-LaTeX Font Info:    Try loading font information for OML+lmm on input line 21.
+LaTeX Font Info:    Try loading font information for OML+lmm on input line 23.
 
 (/usr/share/texmf/tex/latex/lm/omllmm.fd
 File: omllmm.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OMS+lmsy on input line 21.
+LaTeX Font Info:    Try loading font information for OMS+lmsy on input line 23.
 
 
 (/usr/share/texmf/tex/latex/lm/omslmsy.fd
 File: omslmsy.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OMX+lmex on input line 21.
+LaTeX Font Info:    Try loading font information for OMX+lmex on input line 23.
 
 
 (/usr/share/texmf/tex/latex/lm/omxlmex.fd
 File: omxlmex.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <14.4> on input line 21.
+(Font)              <14.4> on input line 23.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10> on input line 21.
+(Font)              <10> on input line 23.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7> on input line 21.
-LaTeX Font Info:    Try loading font information for U+msa on input line 21.
+(Font)              <7> on input line 23.
+LaTeX Font Info:    Try loading font information for U+msa on input line 23.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 21.
+LaTeX Font Info:    Try loading font information for U+msb on input line 23.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
-Underfull \hbox (badness 10000) in paragraph at lines 25--26
-
- []
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 27--28
 
  []
 
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <12> on input line 29.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 29.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 29.
 
-Underfull \hbox (badness 10000) in paragraph at lines 29--31
+Underfull \hbox (badness 10000) in paragraph at lines 29--30
 
  []
 
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <12> on input line 31.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <8> on input line 31.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <6> on input line 31.
 
-Underfull \hbox (badness 10000) in paragraph at lines 32--33
+Underfull \hbox (badness 10000) in paragraph at lines 31--33
 
  []
 
@@ -567,39 +562,28 @@ Underfull \hbox (badness 10000) in paragraph at lines 52--53
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 54--66
+Underfull \hbox (badness 10000) in paragraph at lines 54--55
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 56--68
 
  []
 
 [1]
-Underfull \hbox (badness 10000) in paragraph at lines 67--73
+Underfull \hbox (badness 10000) in paragraph at lines 69--75
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 74--75
+Underfull \hbox (badness 10000) in paragraph at lines 76--79
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 76--77
+Underfull \hbox (badness 10000) in paragraph at lines 80--82
 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 78--79
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 81--82
-
- []
-
-
-Overfull \hbox (3.23024pt too wide) in paragraph at lines 83--84
-[]\OT1/lmr/bx/n/12 2.14 \OT1/lmr/m/n/12 Sim-plify the fol-low-ing Boolean equa-
-tions us-ing Boolean the-o-rems. Check
  []
 
 
@@ -608,64 +592,168 @@ Underfull \hbox (badness 10000) in paragraph at lines 83--84
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 85--86
+Underfull \hbox (badness 10000) in paragraph at lines 85--87
+
+ []
+
+<diagrams/2_8A.png, id=13, 249.93375pt x 111.41624pt>
+File: diagrams/2_8A.png Graphic file (type png)
+ <use diagrams/2_8A.png>
+Package pdftex.def Info: diagrams/2_8A.png used on input line 91.
+(pdftex.def)             Requested size: 249.93314pt x 111.41597pt.
+
+<diagrams/2_8B.png, id=14, 430.60875pt x 166.6225pt>
+File: diagrams/2_8B.png Graphic file (type png)
+ <use diagrams/2_8B.png>
+Package pdftex.def Info: diagrams/2_8B.png used on input line 94.
+(pdftex.def)             Requested size: 430.60768pt x 166.62209pt.
+
+Overfull \hbox (40.60768pt too wide) in paragraph at lines 93--95
+[] 
+ []
+
+[2 <./diagrams/2_8A.png>] <diagrams/2_8C.png, id=19, 327.2225pt x 112.42pt>
+File: diagrams/2_8C.png Graphic file (type png)
+
+<use diagrams/2_8C.png>
+Package pdftex.def Info: diagrams/2_8C.png used on input line 97.
+(pdftex.def)             Requested size: 327.2217pt x 112.41972pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 99--101
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 88--89
+Overfull \hbox (3.23024pt too wide) in paragraph at lines 102--103
+[]\OT1/lmr/bx/n/12 2.14 \OT1/lmr/m/n/12 Sim-plify the fol-low-ing Boolean equa-
+tions us-ing Boolean the-o-rems. Check
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 102--103
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 90--91
+Underfull \hbox (badness 10000) in paragraph at lines 104--127
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 92--93
+Underfull \hbox (badness 10000) in paragraph at lines 104--127
+
+ []
+
+[3 <./diagrams/2_8B.png> <./diagrams/2_8C.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 128--152
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 94--95
-
- []
-
-[2]
-Underfull \hbox (badness 10000) in paragraph at lines 96--97
+Underfull \hbox (badness 10000) in paragraph at lines 128--152
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 98--99
+Underfull \hbox (badness 10000) in paragraph at lines 154--155
+
+ []
+
+<diagrams/2_16A.png, id=23, 135.50626pt x 51.19125pt>
+File: diagrams/2_16A.png Graphic file (type png)
+ <use diagrams/2_16A.png>
+Package pdftex.def Info: diagrams/2_16A.png used on input line 158.
+(pdftex.def)             Requested size: 135.5059pt x 51.19112pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 156--159
+
+ []
+
+<diagrams/2_16B.png, id=24, 237.88875pt x 143.53625pt>
+File: diagrams/2_16B.png Graphic file (type png)
+
+<use diagrams/2_16B.png>
+Package pdftex.def Info: diagrams/2_16B.png used on input line 161.
+(pdftex.def)             Requested size: 237.88815pt x 143.53589pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 160--162
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 100--101
+Underfull \hbox (badness 10000) in paragraph at lines 163--164
 
  []
 
-[3] (./hw2.aux) ) 
+
+Underfull \hbox (badness 10000) in paragraph at lines 165--166
+
+ []
+
+[4 <./diagrams/2_16A.png> <./diagrams/2_16B.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 167--177
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 167--177
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 167--177
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 178--199
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 178--199
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 178--199
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 200--213
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 200--213
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 200--213
+
+ []
+
+[5] (./hw2.aux) ) 
 Here is how much of TeX's memory you used:
- 2687 strings out of 494985
- 35008 string characters out of 6180357
- 96353 words of memory out of 5000000
- 5844 multiletter control sequences out of 15000+600000
+ 2714 strings out of 494985
+ 35506 string characters out of 6180357
+ 96368 words of memory out of 5000000
+ 5864 multiletter control sequences out of 15000+600000
  34156 words of font info for 48 fonts, out of 8000000 for 9000
  36 hyphenation exceptions out of 8191
- 37i,6n,24p,399b,187s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 37i,8n,24p,399b,187s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/share
 /texmf/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm
 -rm.enc}</usr/share/texmf/fonts/type1/public/lm/lmbx12.pfb></usr/share/texmf/fo
 nts/type1/public/lm/lmmi12.pfb></usr/share/texmf/fonts/type1/public/lm/lmr12.pf
 b></usr/share/texmf/fonts/type1/public/lm/lmr17.pfb></usr/share/texmf/fonts/typ
 e1/public/lm/lmsy10.pfb>
-Output written on hw2.pdf (4 pages, 91944 bytes).
+Output written on hw2.pdf (6 pages, 122643 bytes).
 PDF statistics:
- 40 PDF objects out of 1000 (max. 8388607)
- 28 compressed objects within 1 object stream
+ 51 PDF objects out of 1000 (max. 8388607)
+ 32 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 26 words of extra memory for PDF output out of 10000 (max. 10000000)
 
