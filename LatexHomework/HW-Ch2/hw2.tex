@@ -78,9 +78,11 @@ $ = \overline{AB}C + A(B(\cl{}+C)) $ \\
 $ = \overline{AB}C + AB $ T5, T3 \\
 
 (d) $ Y = \overline{A}\overline{B}\overline{C}\overline{D} + \overline{A}\overline{B}C\overline{D} + \overline{A}\overline{B}CD + \overline{A}BC\overline{D} + \overline{A}BCD + A\overline{B}\overline{C}\overline{D} + A\overline{B}C\overline{D} $ \\
-$ = $ \\
-
-$ = A\overline{BD} + \overline{BCD} $ \\
+$ = \overline{AB}(\overline{CD} + C\dl{} + CD) + \al{}BC(\dl{} + D) + A\overline{BD}(\cl{} + C)$ \\
+$ = \overline{AB}(C + \dl{}) + \al{}BC + A\overline{BD}  $ \\
+$ = \overline{AB}C + \overline{ABD} + \al{}BC + A\overline{BD} $ \\
+$ = \overline{BD}(\al{} + A) + \al{}C(\bl{} + B) $ \\
+$ = \al{}C + \overline{BD} $ \\
 
 (e) $ Y = \overline{A}\overline{B}CD + \overline{A}BC\overline{D} + \overline{A}BCD + A\overline{B}\overline{C}\overline{D} + A\overline{B}\overline{C}D + A\overline{B}C\overline{D} + A\overline{B}CD $ \\
 $ = $ \\
@@ -88,15 +90,17 @@ $ = $ \\
 
 \textbf{2.8} Sketch a reasonably simple combinational circuit implementing each of the functions from Exercise 2.6. \\
 (a) $ Y = A + B $ \\
-\includegraphics[scale=1]{2_8A}
+\includegraphics[scale=1]{2_8A} \\
 
 (b) $ Y = \al{}B + \al{}C + A\cl{} $ \\
-\includegraphics[scale=1]{2_8B}
+\includegraphics[scale=1]{2_8B} \\
 
 (c) $ Y = \overline{AB}C + AB $ \\
-\includegraphics[scale=1]{2_8C}
+\includegraphics[scale=1]{2_8C} \\
 
-(d) \\
+(d) $ = \al{}C + \overline{BD} $ \\
+\includegraphics[scale=1]{2_8D} \\
+
 (e) \\
 
 \textbf{2.14} Simplify the following Boolean equations using Boolean theorems. Check for correctness using a truth table or K-map. \\
@@ -148,10 +152,52 @@ A & B & C & $ \overline{ABC} + A\overline{B} $ & $ A\bl{} + \overline{BC} $ \\
 \hline 
 0 & 0 & 0 & 1 & 1 \\ 
 \hline 
-\end{tabular} \\
+\end{tabular} \\ \\
 
 
 (c) $ Y = ABC\overline{D} + A\overline{BCD} + (\overline{A + B + C + D}) $ \\
+$ = ABC\dl{} + A\overline{BCD} + \overline{ABCD} $ \\
+$ = \dl{}(ABC + A\overline{BC} + \overline{ABC}) $ \\
+$ = \dl{}(ABC + \overline{BC}(A + \al{})) $ \\
+$ = \dl{}(ABC + \overline{BC}) $ \\
+$ = ABC\dl{} + \overline{BCD} $ \\ \\
+\begin{tabular}{|c|c|c|c|c|c|}
+A & B & C & D & $ ABC\overline{D} + A\overline{BCD} + (\overline{A + B + C + D}) $ & $ ABC\dl{} + \overline{BCD} $ \\ 
+\hline 
+1 & 1 & 1 & 1 & 0 & 0 \\ 
+\hline 
+1 & 1 & 1 & 0 & 1 & 1 \\ 
+\hline 
+1 & 1 & 0 & 1 & 0 & 0 \\ 
+\hline 
+1 & 1 & 0 & 0 & 0 & 0 \\ 
+\hline 
+1 & 0 & 1 & 1 & 0 & 0 \\ 
+\hline 
+1 & 0 & 1 & 0 & 0 & 0 \\ 
+\hline 
+1 & 0 & 0 & 1 & 0 & 0 \\ 
+\hline 
+1 & 0 & 0 & 0 & 1 & 1 \\ 
+\hline 
+0 & 1 & 1 & 1 & 0 & 0 \\ 
+\hline 
+0 & 1 & 1 & 0 & 0 & 0 \\ 
+\hline 
+0 & 1 & 0 & 1 & 0 & 0 \\ 
+\hline 
+0 & 1 & 0 & 0 & 0 & 0 \\ 
+\hline 
+0 & 0 & 1 & 1 & 0 & 0 \\ 
+\hline 
+0 & 0 & 1 & 0 & 0 & 0 \\ 
+\hline 
+0 & 0 & 0 & 1 & 0 & 0 \\ 
+\hline 
+0 & 0 & 0 & 0 & 1 & 1 \\ 
+\hline 
+\end{tabular} \\ \\
+
 
 \textbf{2.16} Sketch a reasonably simple combinational circuit implementing each of the functions from Exercise 2.14.\\
 (a) $ = \al{}B $ \\
@@ -159,6 +205,9 @@ A & B & C & $ \overline{ABC} + A\overline{B} $ & $ A\bl{} + \overline{BC} $ \\
 
 (b) $ = A\bl{} + \overline{BC} $ \\
 \includegraphics[scale=1]{2_16B} \\
+
+(c) $ ABC\dl{} + \overline{BCD} $ \\
+TODO! Add the picture \\
 
 \textbf{2.22} Prove that the following theorems are true using perfect induction. You need not prove their duals.\\
 
