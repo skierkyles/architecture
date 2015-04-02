@@ -38,7 +38,7 @@ ShowSource=1
 Freq=10000000
 MultiCoreRunAll=1
 [LMIFTDI]
-LMIFTDIserialNo=0E210138
+LMIFTDIserialNo=0E20FFD2
 LMIFTDIfoundProbes=
 [DebugChecksum]
 Checksum=738838023
@@ -51,6 +51,12 @@ LMI_ResetMode=0x00000001
 ShowArgs=0
 [Disassembly]
 MixedMode=1
+[DriverProfiling]
+Enabled=0
+Mode=0
+Graph=0
+Symbiont=0
+Exclusions=
 [watch_formats]
 Fmt0={W}0:0x40058030	4	0
 Fmt1={W}0:R0	4	0
@@ -70,17 +76,12 @@ LoggingEnabled=_ 0
 LogFile=_ ""
 Category=_ 0
 [Aliases]
-A0=_ "Z:\Home\dev\WestminsterCollege\experiments\01-toggle_pa2\main.s" "Z:\Home\WestminsterCollege\CMPT328\labs\lab_4-breadboard\main.s"
-A1=_ "Z:\Home\dev\WestminsterCollege\experiments\e1-breadboard\main.s" ""
-A2=_ "Z:\Home\dev\WestminsterCollege\experiments\e1-breadboard\startup.s" ""
-Count=3
+A0=_ "Z:\Home\WestminsterCollege\CMPT328\labs\lab_4-breadboard\main.s" "F:\Development\architecture\Lab_4\lab_4-breadboard\main.s"
+A1=_ "Z:\Home\dev\WestminsterCollege\experiments\01-toggle_pa2\main.s" "Z:\Home\WestminsterCollege\CMPT328\labs\lab_4-breadboard\main.s"
+A2=_ "Z:\Home\dev\WestminsterCollege\experiments\e1-breadboard\main.s" ""
+A3=_ "Z:\Home\dev\WestminsterCollege\experiments\e1-breadboard\startup.s" ""
+Count=4
 SuppressDialog=0
-[DriverProfiling]
-Enabled=0
-Mode=0
-Graph=0
-Symbiont=0
-Exclusions=
 [TermIOLog]
 LoggingEnabled=_ 0
 LogFile=_ ""

@@ -50,12 +50,60 @@ As the comment implies, this is to simulate a computer performing actions, like 
 
 Before the infinite loop, the program did a few other tasks, like initializing the GPIO ports, and the interrupts associated with those ports.  
 
-To see how ports are initialized, lets inspect the \textit{GPIOF\_Init} branch. It starts by using the \textit{LDR} instruction to move SYSCTL\_GPIOHBCTL\_R into R0. 
+\paragraph{}
+To see how ports are initialized, lets inspect the \textit{GPIOF\_Init} branch. It starts by using the \textit{LDR} [WHATS THIS?] instruction to move SYSCTL\_GPIOHBCTL\_R into R0. 
 
 Continuing through the rest of this branch, it continues to set different values which are essentially defaults to set up the Input Output controller for the switch we want.
 
 \paragraph{}
-Next, we need the Interrupts for our button to be configured. An interrupt is [TODO!!!!!].
+Next, we need the Interrupts for our button to be configured. An hardware interrupt is a signal from a device, in this case a button, to the processor that it needs immediate attention. The most obvious example of an interrupt on a normal computer is a keyboard, when you tap a key, it sends a signal to the processor that it needs attention, which then communicates with the OS to handle the interrupt. 
 The configuration for our interrupt happens in the \textit{GPIOF\_Interrupt\_Init} branch. 
 
+Like above, this used the \textit{LDR, MOV, and ORR} commands among others, to set different values. Part of the process is setting certain bits to 1 to enable the GPIO port we need for the led to function. 
+
+\paragraph{}
+While there are more parts to initializing the GPIO ports, those were the main functions. Now that we have a brief explanation about initializing the interrupts, back to the vector table. The vector table is like a directory, 
+
+\medskip
+
+\lstset{language=[x86masm]Assembler}
+\begin{lstlisting}
+PUSH    {LR}                    ; Will need this later.
+BL      SysTick_Disable         ; Only needed one SysTick
+        
+; Read SW1 position. SW1 depressed will be R0 bit 4 = 0.
+LDR     R0, =GPIO_PORTF_AHB_DATA_BITS_R
+ADD     R0, R0, #0x40   ; SW1 data bits address offset
+LDR     R1, [R0]        ; SW1 state will be 1 when not pressed.
+ANDS    R1, R1, #0x10   ; Test bit 4. Is it set?
+CBNZ    R1, ReArm       ; Bit set? Re-arm GPIOF interrupt.
+        
+; Read, modify, write LED color bits
+LDR     R0, =GPIO_PORTF_AHB_DATA_BITS_R
+ADD     R0, R0, #111B << 3      ; GPIOF LED Bits offset PF123
+LDR     R1, [R0]        ; Fetch current LED color
+LSR     R1, R1, #1      ; Right shift LED color bit
+BIC     R1, R1, #1      ; Clear SW2 bit
+CBNZ    R1, SetLED      ; Branch to SetLED if result non-zero.
+MOV     R1, #0x08       ; Hit zero, re-init LED color to green.
+
+\end{lstlisting}	
+\begin{center}
+\small{Figure 2: The SysTick\_Handler.}
+\end{center}
+
+\paragraph{}
+Throughout the program, you see PUSH \{LR\} and POP \{LR\}. \{LR\} is the link register, in simple terms, this register contains information about where to return to when a function finishes. If my understanding is correct, in \textit{GPIOPortF\_Handler} it pushes the LR onto the stack to store it for when this interrupt is complete. Once it's done, it pops it off the stack, and branches to LR. IF my understanding of this lab and architecture is true, the stack is used with interrupts to store where to return to when an interrupt occurs and is processed. This is to ensure that the computer resumes processing from where it left off when the interrupt occurred. Since, as the name implies, it interrupted normal execution. 
+
+\paragraph{}
+As you may of picked up on, interrupts allow a computer do practically do multiple things at once, even with only one processing core. While not technically at once, the process of Context switching is what enables this. Without context switching, your computer could only do one thing at a time, it could process a thing, then respond to input, etc. This sounds like a pretty miserable way to use a computer. Luckily, computers can do small task very quickly, so context switching has a computer perform a small task, then switch to another small task, and with enough of these switches, you have the illusion of a multitasking computer. Above is a form of context switching, the handler interrupts the normal flow of the hardware, the hardware gives control to the handler, which then using the LR register stores it, does it's own actions, and switches context back to the previous program by popping the LR register. 
+
 \end{document}
+
+
+
+
+
+
+
+
