@@ -38,7 +38,7 @@ ShowSource=1
 Freq=10000000
 MultiCoreRunAll=1
 [LMIFTDI]
-LMIFTDIserialNo=0E20FFD2
+LMIFTDIserialNo=0E210138
 LMIFTDIfoundProbes=
 [DebugChecksum]
 Checksum=738838023
@@ -81,7 +81,7 @@ A1=_ "Z:\Home\dev\WestminsterCollege\experiments\01-toggle_pa2\main.s" "Z:\Home\
 A2=_ "Z:\Home\dev\WestminsterCollege\experiments\e1-breadboard\main.s" ""
 A3=_ "Z:\Home\dev\WestminsterCollege\experiments\e1-breadboard\startup.s" ""
 Count=4
-SuppressDialog=0
+SuppressDialog=1
 [TermIOLog]
 LoggingEnabled=_ 0
 LogFile=_ ""
