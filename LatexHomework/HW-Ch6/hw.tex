@@ -16,8 +16,17 @@
 
 \textbf{Exercise 6.4} - Repeat Exercise 6.3 for memory storage of a 32-bit word stored at memory word 15 in a byte-addressable memory. \\
 a) What is the byte address of memory word 15? \\
+$ 15 \times 4 = 15 \times 2^{2} = 1111 << 2 $ \\
+$ = 111100 = 0x3C $ \\
+
 b) What are the byte address that memory word 15 spans? \\
+$ 0x3C to 111100 + 11 $ \\
+$ = 111111 = 0x3F $ \\
+$ 0x3C to 0x3F $ \\
+
 c) Draw the number 0xFF223344 stored at word 15 in both big-endian and little-endian machines. Your drawing should be similar to Figure 6.4. Clearly label the byte address corresponding to each data byte value. \\
+\includegraphics[scale=.15]{img/num} \\
+
 
 \medskip
 
@@ -167,9 +176,11 @@ jr \$ra \\
 
 \medskip
 
-\textbf{Exercise 6.16} \\
+\textbf{Exercise 6.16} - The nori instruction is not part of the MIPS instruction set, because the same functionality can be implemented using existing functions. Write a short assembly code snippet that has the following functionality: \$t0 = \$t1 NOR 0xF234. Use as few instructions as possible. \\
 
 
+
+\textbf{ARM Assignment Portion}
 
 
 \end{normalsize}
