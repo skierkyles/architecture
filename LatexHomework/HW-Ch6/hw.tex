@@ -6,7 +6,7 @@
 \usepackage{graphicx}
 \usepackage{lmodern}
 \usepackage{listings}
-\usepackage[margin=0.5in]{geometry}
+\usepackage[margin=0.6in]{geometry}
 
 \author{Kyle Swanson}
 \title{Chapter 6 Exercises: Architecture}
@@ -45,7 +45,7 @@ func = add = 100000 \\
 
 Put it together: \\
 000000 10000 10001 01000 00000 100000 \\
-= \textbf{0x2114020} \\
+= \textbf{0x2114020} \\ \\
 
 \textit{lw \$t0, 0x20(\$t7)} \\
 This is a I-type instruction. Load Word - lw rt, imm(rs) \\
@@ -57,7 +57,7 @@ imm = 0x20 = 0000000000100000 \\
 
 Put it together: \\
 100011 01111 01000 0000000000100000 \\
-= \textbf{0x8DE80020} \\
+= \textbf{0x8DE80020} \\ \\
 
 \textit{addi \$s0, \$0, -10} \\
 This is a I-type instruction. Add Immediate - addi rt, rs, imm \\
@@ -69,7 +69,7 @@ imm = -10 = 1111111111110110 \\
 
 Put it together: \\
 001000 00000 10000 1111111111110110 \\
-= \textbf{0x2010FFF6} \\
+= \textbf{0x2010FFF6} \\ \\
 
 \medskip
 
@@ -167,7 +167,6 @@ add \$v1, \$t0, \$0 \\
 
 0x03E00008 = 000000 11111 00000 00000 00000 001000 \\
 R-type \\
-R-type = opcode, rs, rt, rd, shamt, func
 opcode = 000000 \\
 rs = 11111 = 31 = \$ra \\
 rt = 00000 = 0 = \$0 \\
@@ -181,11 +180,26 @@ jr \$ra \\
 
 \textbf{Exercise 6.16} - The nori instruction is not part of the MIPS instruction set, because the same functionality can be implemented using existing functions. Write a short assembly code snippet that has the following functionality: \$t0 = \$t1 NOR 0xF234. Use as few instructions as possible. \\
 
+\lstset{language=[x86masm]Assembler}
+\begin{lstlisting}
+li $t2, -1
 
+ori $t1, $t1, 0xF234
+xor $t0, $t1, $t2
+\end{lstlisting}	
+\begin{center}
+\small{NORI implemented in Assembler}
+\end{center}
+
+For my solution, I first set a register to all 1's. I then do the normal OR that was requested. Then I XOR the result with the negative 1's. Which has the effect of negation.
+Therefore it's a NORI. \\ 
+
+\medskip
 
 \textbf{ARM Assignment Portion} \\
 Please excuse the use of ^^ to denote a comment about the assembly code. \\
 It seemed like the most clear/obvious way. \\
+See the comments for descriptions about where the C code is specifically, and how it works. \\
 
 \textbf{1 - If} \\
 
@@ -222,7 +236,7 @@ main:
 \end{lstlisting}	
 \begin{center}
 \small{A Assembler If loop}
-\end{center}
+\end{center} 
 
 
 \textbf{2 - If Else} \\
@@ -357,7 +371,7 @@ main:
          0x88: 0x280a         CMP       R0, #10                 ; 0xa
          ^^ Check if counter == 10 ^^
          0x8a: 0xdbfc         BLT.N     0x86
-         ^^ if it's less than, go to 0x86. This is the while. ^^
+         ^^ if its less than, go to 0x86. This is the while. ^^
          0x8c: 0x2000         MOVS      R0, #0
          0x8e: 0x4770         BX        LR
 \end{lstlisting}	

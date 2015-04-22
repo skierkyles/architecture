@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2015/dev/Debian) (preloaded format=pdflatex 2015.4.16)  16 APR 2015 20:09
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2015/dev/Debian) (preloaded format=pdflatex 2015.4.16)  22 APR 2015 15:27
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -514,15 +514,15 @@ e
 * layout: <same size as paper>
 * layoutoffset:(h,v)=(0.0pt,0.0pt)
 * modes: 
-* h-part:(L,W,R)=(36.135pt, 525.23788pt, 36.135pt)
-* v-part:(T,H,B)=(36.135pt, 772.77686pt, 36.135pt)
+* h-part:(L,W,R)=(43.36243pt, 510.78302pt, 43.36243pt)
+* v-part:(T,H,B)=(43.36243pt, 758.32199pt, 43.36243pt)
 * \paperwidth=597.50787pt
 * \paperheight=845.04684pt
-* \textwidth=525.23788pt
-* \textheight=772.77686pt
-* \oddsidemargin=-36.135pt
-* \evensidemargin=-36.135pt
-* \topmargin=-73.135pt
+* \textwidth=510.78302pt
+* \textheight=758.32199pt
+* \oddsidemargin=-28.90756pt
+* \evensidemargin=-28.90756pt
+* \topmargin=-65.90756pt
 * \headheight=12.0pt
 * \headsep=25.0pt
 * \topskip=12.0pt
@@ -611,6 +611,11 @@ Underfull \hbox (badness 10000) in paragraph at lines 46--49
  []
 
 
+Underfull \hbox (badness 10000) in paragraph at lines 46--49
+
+ []
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 50--52
 
  []
@@ -626,12 +631,22 @@ Underfull \hbox (badness 10000) in paragraph at lines 58--61
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 62--64
+Underfull \hbox (badness 10000) in paragraph at lines 58--61
 
  []
 
 [1 <./img/num.jpg>]
+Underfull \hbox (badness 10000) in paragraph at lines 62--64
+
+ []
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 65--69
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 70--73
 
  []
 
@@ -675,7 +690,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 111--119
 
  []
 
-
+[2]
 Underfull \hbox (badness 10000) in paragraph at lines 120--121
 
  []
@@ -685,7 +700,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 122--128
 
  []
 
-[2]
+
 Underfull \hbox (badness 10000) in paragraph at lines 129--130
 
  []
@@ -726,44 +741,19 @@ Underfull \hbox (badness 10000) in paragraph at lines 166--167
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 168--177
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 178--179
+Underfull \hbox (badness 10000) in paragraph at lines 168--176
 
  []
 
 [3]
-Underfull \hbox (badness 10000) in paragraph at lines 182--183
+Underfull \hbox (badness 10000) in paragraph at lines 177--178
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 186--189
+Underfull \hbox (badness 10000) in paragraph at lines 181--182
 
  []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 190--191
-
- []
-
-(/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
-File: lstlang1.sty 2014/09/06 1.5e listings language file
-)
-(/usr/share/texlive/texmf-dist/tex/latex/listings/lstmisc.sty
-File: lstmisc.sty 2014/09/06 1.5e (Carsten Heinz)
-)
-LaTeX Font Info:    Try loading font information for OMS+lmr on input line 194.
-
-
-(/usr/share/texmf/tex/latex/lm/omslmr.fd
-File: omslmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
-)
-LaTeX Font Info:    Font shape `OMS/lmr/m/n' in size <12> not available
-(Font)              Font shape `OMS/lmsy/m/n' tried instead on input line 194.
 
 (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2014/09/06 1.5e listings language file
@@ -774,51 +764,80 @@ File: lstlang2.sty 2014/09/06 1.5e listings language file
 (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang3.sty
 File: lstlang3.sty 2014/09/06 1.5e listings language file
 )
-Underfull \hbox (badness 10000) in paragraph at lines 228--229
+Underfull \hbox (badness 10000) in paragraph at lines 194--196
 
  []
 
-[4]
-Underfull \hbox (badness 10000) in paragraph at lines 269--270
+
+Underfull \hbox (badness 10000) in paragraph at lines 199--203
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 204--205
+
+ []
+
+(/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
+File: lstlang1.sty 2014/09/06 1.5e listings language file
+)
+(/usr/share/texlive/texmf-dist/tex/latex/listings/lstmisc.sty
+File: lstmisc.sty 2014/09/06 1.5e (Carsten Heinz)
+)
+LaTeX Font Info:    Try loading font information for OMS+lmr on input line 208.
+
+
+(/usr/share/texmf/tex/latex/lm/omslmr.fd
+File: omslmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+LaTeX Font Info:    Font shape `OMS/lmr/m/n' in size <12> not available
+(Font)              Font shape `OMS/lmsy/m/n' tried instead on input line 208.
+ [4]
+Underfull \hbox (badness 10000) in paragraph at lines 242--243
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 283--284
 
  []
 
 [5]
-Underfull \hbox (badness 10000) in paragraph at lines 331--332
+Underfull \hbox (badness 10000) in paragraph at lines 345--346
 
  []
 
-LaTeX Font Info:    Try loading font information for OML+lmr on input line 338.
+LaTeX Font Info:    Try loading font information for OML+lmr on input line 352.
 
 (/usr/share/texmf/tex/latex/lm/omllmr.fd
 File: omllmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    Font shape `OML/lmr/m/n' in size <12> not available
-(Font)              Font shape `OML/lmm/m/it' tried instead on input line 338.
-
-Underfull \hbox (badness 10000) in paragraph at lines 369--370
+(Font)              Font shape `OML/lmm/m/it' tried instead on input line 352.
+ [6]
+Underfull \hbox (badness 10000) in paragraph at lines 383--384
 
  []
 
-[6]
-Underfull \hbox (badness 10000) in paragraph at lines 411--412
+
+Underfull \hbox (badness 10000) in paragraph at lines 425--426
 
  []
 
 [7]
-Underfull \hbox (badness 10000) in paragraph at lines 451--452
+Underfull \hbox (badness 10000) in paragraph at lines 467--468
 
  []
 
 [8] [9] (./hw.aux) ) 
 Here is how much of TeX's memory you used:
- 5871 strings out of 494977
- 74803 string characters out of 6180183
- 185850 words of memory out of 5000000
- 8986 multiletter control sequences out of 15000+600000
+ 5905 strings out of 494977
+ 75144 string characters out of 6180183
+ 198290 words of memory out of 5000000
+ 9020 multiletter control sequences out of 15000+600000
  44298 words of font info for 51 fonts, out of 8000000 for 9000
  36 hyphenation exceptions out of 8191
- 38i,6n,49p,325b,1678s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 38i,6n,49p,325b,1675s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf/fonts/enc/dvips/lm/lm-rm.enc}{/usr/share/
 texmf/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-
 mathsy.enc}</usr/share/texmf/fonts/type1/public/lm/lmbx12.pfb></usr/share/texmf
@@ -827,7 +846,7 @@ mathsy.enc}</usr/share/texmf/fonts/type1/public/lm/lmbx12.pfb></usr/share/texmf
 type1/public/lm/lmr17.pfb></usr/share/texmf/fonts/type1/public/lm/lmr8.pfb></us
 r/share/texmf/fonts/type1/public/lm/lmri12.pfb></usr/share/texmf/fonts/type1/pu
 blic/lm/lmro12.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy10.pfb>
-Output written on hw.pdf (10 pages, 582540 bytes).
+Output written on hw.pdf (10 pages, 583426 bytes).
 PDF statistics:
  77 PDF objects out of 1000 (max. 8388607)
  54 compressed objects within 1 object stream
